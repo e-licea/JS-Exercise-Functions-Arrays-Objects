@@ -40,18 +40,19 @@ function addNumbers(num1, num2) {
  * }
 */
 
-let newProfile;
+let newProfile={};
 
 function makePersonObject(id, name, email) {
-    newProfile= {
-      this.id: id,
-      this.firstName: name,
-      this.electronicMail: email,
-    }
+    newProfile = {
+      id: id,
+      name: name,
+      email: email
+    };
+      return newProfile;
 
-    return makePersonObject('e-licea', 'esteban', 'elicea0412@gmail.com');
-  
 }
+
+makePersonObject('LizardKing', 'Hule', 'hulematthews@infosec.net');
 
 /**
  * ### Challenge `getName`
@@ -66,10 +67,17 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+let product = {
+  modelNum : '23332123-USMC',
+  sku : '99-2132',
+  name: 'CV90120-T Ghost'
 }
 
+function getName(object) {
+  console.log(object.name);
+};
+
+getName(product);
 /**
  * ### Challenge `makeSmartPerson`
  * 
@@ -82,10 +90,24 @@ function getName(/* code here */) {
  *     It has a `speak` method that takes no arguments
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
-*/
-function makeSmartPerson(/* code here */) {
-  /* code here */
+*/  
+
+let object = {};
+function makeSmartPerson(name) {
+  object = {
+    name: name,
+    sum: function add(a,b){
+      let sum = a+b;
+    },
+    speak: 'Hello, my name is' + name
+
+  }
+  
+
+  return object;
 }
+makeSmartPerson('Sam Brown');
+
 
 
 
