@@ -39,8 +39,18 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+
+let newProfile;
+
+function makePersonObject(id, name, email) {
+    newProfile= {
+      this.id: id,
+      this.firstName: name,
+      this.electronicMail: email,
+    }
+
+    return makePersonObject('e-licea', 'esteban', 'elicea0412@gmail.com');
+  
 }
 
 /**
