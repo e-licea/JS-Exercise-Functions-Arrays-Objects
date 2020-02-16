@@ -93,11 +93,11 @@ getName(product);
 */  
 
 let object = {};
-function makeSmartPerson(name) {
+function makeSmartPerson(name,) {
   object = {
     name: name,
     sum: function add(a,b){
-      let sum = a+b;
+      return a+b;
     },
     speak: 'Hello, my name is' + name
 
@@ -168,8 +168,14 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
-}
+  
+  let carObject = inventory[index];
+
+
+  console.log('This is a '+ carObject.car_make +' '+ carObject.car_model);
+};
+
+getCarInfoByIndex(inventory, [2]);
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -182,10 +188,13 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
-}
+function getLastCarInfo(array) {
+  for (i = 0; i < array.length; i++){
+    let carObjects = array[i];
+    console.log(' This is a '+ carObjects.car_make + ' '+carObjects.car_model);
+  }
 
+}
 /**
  * ### Challenge `getCarInfoById`
  * 
@@ -198,9 +207,11 @@ function getLastCarInfo(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(array, index) {
+  let carid = array[index];
+  return carid.id;
 }
+getCarInfoById();
 
 /**
  * ### Challenge `sortCarInventory`
