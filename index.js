@@ -221,10 +221,23 @@ getCarInfoById();
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
-  /* code here */
+function getLastCarInfo(array) {
+  let models =[];
+  let finalList;
+
+
+  for (i = 0; i < array.length; i++){
+    let carObjects = array[i];
+    
+    models.push(carObjects.car_model);
+    finalList = models
+    
+    
+  }
+  console.log(finalList.sort());
 }
 
+getLastCarInfo(inventory);
 /**
  * ### Challenge `getModelYears`
  * 
